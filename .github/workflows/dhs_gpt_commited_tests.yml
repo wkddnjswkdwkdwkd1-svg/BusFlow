@@ -1,0 +1,38 @@
+name: dhs_gpt_commited tests
+on:
+  push:
+    paths:
+      - '*dhs_gpt_commited*'
+      - 'services/*dhs_gpt_commited*'
+      - 'tests/*dhs_gpt_commited*'
+      - '.github/workflows/dhs_gpt_commited_tests.yml'
+  pull_request:
+    paths:
+      - '*dhs_gpt_commited*'
+      - 'services/*dhs_gpt_commited*'
+      - 'tests/*dhs_gpt_commited*'
+      - '.github/workflows/dhs_gpt_commited_tests.yml'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      BUSFLOW_OFFLINE: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test dependencies
+        run: pip install pytest holidays
+      - name: Weather, routing and real spreadsheet tests
+        run: python -m pytest -q tests/test_weather_delay_dhs_gpt_commited.py tests/test_integrated_dhs_gpt_commited.py tests/test_workbook_dhs_gpt_commited.py
+      - name: Actual UI event handler tests
+        run: node tests/test_ui_integrated_dhs_gpt_commited.js
+      - name: Install browser test tools
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Browser test with real repository files, external APIs disabled
+        run: node tests/browser_dhs_gpt_commited.cjs

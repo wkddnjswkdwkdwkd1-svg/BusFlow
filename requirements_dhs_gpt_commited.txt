@@ -1,0 +1,2 @@
+# Optional/extra packages for the dhs_gpt_commited overlay
+holidays>=0.60

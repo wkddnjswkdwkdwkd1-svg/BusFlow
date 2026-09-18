@@ -1,0 +1,69 @@
+{
+  "distance_km": 22.8,
+  "min_valid_vds": 9,
+  "day_type_note": "현재 학습의 holiday는 토/일 기준. 법정공휴일은 향후 캘린더 연동 권장.",
+  "rainfall_unit": "mm/hour",
+  "rainfall_cap_mm_per_hour": 20.0,
+  "seasons": {
+    "winter": [12, 1, 2],
+    "spring": [3, 4, 5],
+    "summer": [6, 7, 8],
+    "fall": [9, 10, 11]
+  },
+  "rain_delay_knots": {
+    "winter": [
+      {"rain_mm_per_hour": 0.0, "delay_weight": 1.0},
+      {"rain_mm_per_hour": 1.0, "delay_weight": 1.0307697615663756},
+      {"rain_mm_per_hour": 3.0, "delay_weight": 1.0810494473627572},
+      {"rain_mm_per_hour": 10.0, "delay_weight": 1.1454504955975595},
+      {"rain_mm_per_hour": 20.0, "delay_weight": 1.2014780272160206}
+    ],
+    "spring": [
+      {"rain_mm_per_hour": 0.0, "delay_weight": 1.0},
+      {"rain_mm_per_hour": 1.0, "delay_weight": 1.0869107886111748},
+      {"rain_mm_per_hour": 3.0, "delay_weight": 1.0950244578058783},
+      {"rain_mm_per_hour": 10.0, "delay_weight": 1.1437102362144929},
+      {"rain_mm_per_hour": 20.0, "delay_weight": 1.2026173913372022}
+    ],
+    "summer": [
+      {"rain_mm_per_hour": 0.0, "delay_weight": 1.0},
+      {"rain_mm_per_hour": 1.0, "delay_weight": 1.0521166534363864},
+      {"rain_mm_per_hour": 3.0, "delay_weight": 1.0951589310930743},
+      {"rain_mm_per_hour": 10.0, "delay_weight": 1.1563671148816508},
+      {"rain_mm_per_hour": 20.0, "delay_weight": 1.1954880977329772}
+    ],
+    "fall": [
+      {"rain_mm_per_hour": 0.0, "delay_weight": 1.0},
+      {"rain_mm_per_hour": 1.0, "delay_weight": 1.0903247006392023},
+      {"rain_mm_per_hour": 3.0, "delay_weight": 1.0903247006392023},
+      {"rain_mm_per_hour": 10.0, "delay_weight": 1.1300247711377918},
+      {"rain_mm_per_hour": 20.0, "delay_weight": 1.2152733066652088}
+    ]
+  },
+  "baseline": [
+    {"season":"fall","day_type":"holiday","hour":6,"baseline_speed_kmh":94.7274,"baseline_time_min":14.4667,"samples":23},
+    {"season":"fall","day_type":"holiday","hour":7,"baseline_speed_kmh":93.7312,"baseline_time_min":14.6193,"samples":23},
+    {"season":"fall","day_type":"holiday","hour":8,"baseline_speed_kmh":86.02,"baseline_time_min":16.0217,"samples":26},
+    {"season":"fall","day_type":"weekday","hour":6,"baseline_speed_kmh":74.5565,"baseline_time_min":18.7246,"samples":80},
+    {"season":"fall","day_type":"weekday","hour":7,"baseline_speed_kmh":57.097,"baseline_time_min":24.7518,"samples":75},
+    {"season":"fall","day_type":"weekday","hour":8,"baseline_speed_kmh":53.8042,"baseline_time_min":26.034,"samples":75},
+    {"season":"spring","day_type":"holiday","hour":6,"baseline_speed_kmh":93.5788,"baseline_time_min":14.6471,"samples":60},
+    {"season":"spring","day_type":"holiday","hour":7,"baseline_speed_kmh":91.6295,"baseline_time_min":14.9627,"samples":63},
+    {"season":"spring","day_type":"holiday","hour":8,"baseline_speed_kmh":86.6338,"baseline_time_min":15.9018,"samples":59},
+    {"season":"spring","day_type":"weekday","hour":6,"baseline_speed_kmh":75.5669,"baseline_time_min":18.4046,"samples":146},
+    {"season":"spring","day_type":"weekday","hour":7,"baseline_speed_kmh":59.9668,"baseline_time_min":23.6067,"samples":155},
+    {"season":"spring","day_type":"weekday","hour":8,"baseline_speed_kmh":58.8265,"baseline_time_min":24.2555,"samples":155},
+    {"season":"summer","day_type":"holiday","hour":6,"baseline_speed_kmh":95.803,"baseline_time_min":14.3037,"samples":52},
+    {"season":"summer","day_type":"holiday","hour":7,"baseline_speed_kmh":93.6426,"baseline_time_min":14.6475,"samples":49},
+    {"season":"summer","day_type":"holiday","hour":8,"baseline_speed_kmh":87.6707,"baseline_time_min":15.6884,"samples":51},
+    {"season":"summer","day_type":"weekday","hour":6,"baseline_speed_kmh":76.6168,"baseline_time_min":18.168,"samples":113},
+    {"season":"summer","day_type":"weekday","hour":7,"baseline_speed_kmh":58.779,"baseline_time_min":24.1109,"samples":112},
+    {"season":"summer","day_type":"weekday","hour":8,"baseline_speed_kmh":56.1232,"baseline_time_min":25.5089,"samples":116},
+    {"season":"winter","day_type":"holiday","hour":6,"baseline_speed_kmh":88.3301,"baseline_time_min":15.5142,"samples":23},
+    {"season":"winter","day_type":"holiday","hour":7,"baseline_speed_kmh":87.5537,"baseline_time_min":15.6699,"samples":25},
+    {"season":"winter","day_type":"holiday","hour":8,"baseline_speed_kmh":84.523,"baseline_time_min":16.2866,"samples":25},
+    {"season":"winter","day_type":"weekday","hour":6,"baseline_speed_kmh":70.1883,"baseline_time_min":19.7281,"samples":57},
+    {"season":"winter","day_type":"weekday","hour":7,"baseline_speed_kmh":54.0912,"baseline_time_min":26.2032,"samples":65},
+    {"season":"winter","day_type":"weekday","hour":8,"baseline_speed_kmh":54.4691,"baseline_time_min":26.4183,"samples":62}
+  ]
+}

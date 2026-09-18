@@ -1,0 +1,194 @@
+{
+  "verified_commit": "b6f4d2ace1952b4ac4262c084a4764f57f8bbcdb",
+  "audit_workflow": "https://github.com/dhs610110/BusFlow/actions/runs/35298089995",
+  "databases": {
+    "data/busflow.db": {
+      "bytes": 4825088,
+      "tables": {
+        "congestion": {
+          "columns": [
+            "id",
+            "opr_ymd",
+            "dow_nm",
+            "route_id",
+            "station_id",
+            "station_seq",
+            "time_zone",
+            "congestion"
+          ],
+          "rows": 93516,
+          "opr_ymd_range": [
+            "20260201",
+            "20260807"
+          ]
+        }
+      }
+    },
+    "weather.db": {
+      "bytes": 23257088,
+      "tables": {
+        "weather": {
+          "columns": [
+            "id",
+            "opr_ymd",
+            "route_id",
+            "station_id",
+            "station_seq",
+            "time_zone",
+            "weather_station_id",
+            "weather_station_name",
+            "temperature",
+            "rainfall",
+            "humidity",
+            "wind_speed",
+            "snow_depth"
+          ],
+          "rows": 127840,
+          "opr_ymd_range": [
+            "20260201",
+            "20260807"
+          ]
+        }
+      }
+    }
+  },
+  "spreadsheets": {
+    "analysis/upstream_analysis.xlsx / headway": {
+      "rows": 239,
+      "columns": [
+        "route_name",
+        "hour",
+        "station_name",
+        "headway_group",
+        "sample_count",
+        "avg_headway",
+        "median_headway",
+        "avg_first_seat",
+        "avg_second_seat",
+        "avg_seat_gain",
+        "second_more_seat_rate",
+        "second_over_10_rate",
+        "second_under_5_rate"
+      ]
+    },
+    "analysis/station_weekday_hour_average.xlsx / 전체_상세": {
+      "rows": 1437,
+      "columns": [
+        "route_name",
+        "station_id",
+        "station_seq",
+        "time_zone",
+        "dow_nm",
+        "avg_congestion",
+        "data_count"
+      ]
+    },
+    "BusFlow_5003_bus_weather_by_datetime (1).xlsx / 5003A_날짜시간": {
+      "rows": 3342,
+      "columns": [
+        "날짜",
+        "요일",
+        "시간대",
+        "노선",
+        "노선평균혼잡도",
+        "노선최소혼잡도",
+        "노선최대혼잡도",
+        "전체관측수",
+        "기상관측소ID",
+        "기상관측소",
+        "기온(°C)",
+        "강수량(mm)",
+        "습도(%)",
+        "풍속(m/s)",
+        "적설(cm)",
+        "혼잡도_27_동백고.풍림코아루.호수마을서해",
+        "혼잡도_28_동백중학교",
+        "혼잡도_29_동막초등학교.호수마을계룡리슈",
+        "혼잡도_30_호수마을.자연엔데시앙",
+        "혼잡도_31_동백이마트",
+        "혼잡도_32_어정역",
+        "혼잡도_33_어정풍림아파트",
+        "혼잡도_34_갈천마을",
+        "혼잡도_35_지석역",
+        "혼잡도_36_어정삼거리.강남마을",
+        "혼잡도_37_강남대역.강남대입구",
+        "혼잡도_38_수원컨트리클럽",
+        "혼잡도_39_기흥역6번출구"
+      ]
+    },
+    "BusFlow_5003_bus_weather_by_datetime (1).xlsx / 5003B_날짜시간": {
+      "rows": 3342,
+      "columns": [
+        "날짜",
+        "요일",
+        "시간대",
+        "노선",
+        "노선평균혼잡도",
+        "노선최소혼잡도",
+        "노선최대혼잡도",
+        "전체관측수",
+        "기상관측소ID",
+        "기상관측소",
+        "기온(°C)",
+        "강수량(mm)",
+        "습도(%)",
+        "풍속(m/s)",
+        "적설(cm)",
+        "혼잡도_53_말죽거리공원사거리(중)",
+        "혼잡도_54_양재역.서초문화예술회관(중)",
+        "혼잡도_55_뱅뱅사거리(중)",
+        "혼잡도_56_래미안아파트.파이낸셜뉴스(중)",
+        "혼잡도_57_신분당선강남역",
+        "혼잡도_58_신논현역"
+      ]
+    },
+    "analysis/seat_drop_analysis.xlsx / raw_drops": {
+      "rows": 531,
+      "columns": [
+        "route_name",
+        "veh_id",
+        "trip_no",
+        "station_id",
+        "station_seq",
+        "station_name",
+        "collected_at",
+        "remain_seat_cnt",
+        "date",
+        "hour",
+        "prev_time",
+        "prev_seq",
+        "time_gap_min",
+        "new_trip",
+        "prev_station_id",
+        "prev_station_name",
+        "prev_station_seq",
+        "prev_seat",
+        "seq_gap",
+        "seat_drop",
+        "seat_change",
+        "travel_min",
+        "section"
+      ]
+    }
+  },
+  "csv": {
+    "highway_speed.csv": {
+      "rows": 40948,
+      "columns": [
+        "vds_id",
+        "avg_speed",
+        "traffic_volume",
+        "occupancy",
+        "hour",
+        "date",
+        "route_no",
+        "direction",
+        "km"
+      ],
+      "date_range": [
+        "2026-02-03",
+        "2026-06-23"
+      ]
+    }
+  }
+}

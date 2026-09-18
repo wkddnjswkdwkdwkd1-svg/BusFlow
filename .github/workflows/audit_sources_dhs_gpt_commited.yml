@@ -1,0 +1,21 @@
+name: Audit existing data dhs_gpt_commited
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'analysis/audit_sources_dhs_gpt_commited.py'
+      - 'services/workbook_data_dhs_gpt_commited.py'
+      - '.github/workflows/audit_sources_dhs_gpt_commited.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Inspect original DB XLSX CSV without network calls
+        run: python analysis/audit_sources_dhs_gpt_commited.py
